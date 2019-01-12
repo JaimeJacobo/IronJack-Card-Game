@@ -191,16 +191,9 @@ button {
     color: red;
 }
 
-.displayOn {
-    
-}
-
-.displayOff {
-    display: none;
-}
 #alternativeContent {
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: start;
@@ -223,7 +216,7 @@ button {
         display: none;
     }
 
-    .displayOff {
-        display: block;
+    #alternativeContent {
+        display: flex;
     }
 }
