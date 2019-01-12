@@ -1,0 +1,229 @@
+/* BOOTSTRAP'S CSS */
+
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    -webkit-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    0px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:         0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn-default:active,
+.btn-primary:active,
+.btn-success:active,
+.btn-info:active,
+.btn-warning:active,
+.btn-danger:active {
+    margin-top: 3px;
+    margin-bottom: -3px;
+}
+
+
+
+
+
+/* 
+MY CSS */
+
+
+#allTheContent {
+    background-image: url(images//gameBoard.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+   
+}
+
+.sizeOfTheCardsOnTheTable {
+    height: 16vh;
+}
+
+#header h1 {
+    font-size: 5em;
+    color: rgb(0, 68, 14);
+    font-family: roboto monospace;
+    font-weight: 700;
+}
+
+.flexCentered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border {
+    border-width: 1px;
+    border-style: solid;
+}
+
+.margin {
+    margin: 8px 0;
+}
+
+.width60 {
+    width: 60vw;
+}
+
+.width35 {
+    width: 35vw;
+}
+
+.width13 {
+    width: 13vw;
+}
+
+p {
+    font-size: 47px;
+}
+
+.flexSpaceEvenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flexSpaceAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#actualBetDiv p {
+    font-size: 26px;
+}
+
+.flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#startNewGameButton button {
+    font-size: 26px;
+}
+
+#footerDiv2 {
+    background-color: rgb(223,223,83);
+    
+}
+
+
+#footerDiv2 p {
+    font-size: 26px;
+}
+
+/* #footerDiv2 p {
+    font-size: 26px;
+} */
+
+button {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 24px;
+}
+
+.countSize {
+    font-size: 29px;
+}
+
+.marginFooter {
+    margin-top: 15px;
+}
+
+#chips img{
+    width: 30px;
+    height: 30px;
+}
+
+.easterEgg {
+    height: 100vh;
+    margin-left: 33vh;
+
+}
+
+#playerCardsDiv {
+    margin-top: 61px;
+}
+
+#totalBet {
+    margin-top: 40px;
+    background-color: rgb(0,101,26);
+    padding: 0 7px;
+}
+
+#dealerCardsDiv {
+    margin-top: 43px;
+}
+
+#totalMoney {
+    margin: 0 0;
+}
+
+.absolute {
+    position: absolute;
+    top: 0px;
+    left: 1153px;
+}
+
+.modal-body p {
+    font-size: 1rem;
+}
+
+.modal-body h1 {
+    font-size: 1.25rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+#ironhackLogo {
+    height: 13vh;
+}
+.red {
+    color: red;
+}
+
+.displayOn {
+    
+}
+
+.displayOff {
+    display: none;
+}
+#alternativeContent {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#alternativeContent p {
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#alternativeContent img {
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1270px){
+    .displayOn{
+        display: none;
+    }
+
+    .displayOff {
+        display: block;
+    }
+}

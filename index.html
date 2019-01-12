@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ironjack - Blackjack</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+
+<div id="allTheContent" class="displayOn">
+    <div id="header" class="flexCentered">
+            <h1>
+                <img src="images//ironhackLogo.png" id="ironhackLogo">
+            </h1>
+            <h1>
+                
+            </h1>
+    </div>
+
+    <button type="button" class="btn btn-primary absolute" data-toggle="modal" data-target="#exampleModalCenter">
+            Instructions
+        </button>
+
+    <div id="dealerCards" class="flexCentered margin">
+        <div id="dealerCardsDiv" class="flexSpaceEvenly width60">
+           
+            <p id = "dealerCount" class="countSize">
+                (0)
+            </p>
+        </div>
+    </div>
+
+    <div id="actualBet" class="flexCentered margin">
+        <div id="actualBetDiv" class="flexCentered width60">
+            <p id="totalBet" class="border">
+                0$
+            </p>
+        </div>
+    </div>
+
+    <div id="playerCards" class="flexCentered">
+        <div id="playerCardsDiv" class="flexSpaceEvenly width60">
+            
+            <p id="playerCount" class="countSize">
+                (0)
+            </p>
+        </div>
+    </div>
+
+    <div id="footer" class="flexSpaceAround marginFooter">
+        <div id="startNewGameButton" class="flexSpaceEvenly width13">
+            <button type="button" class="btn btn-light">Start New Game</button>
+         </div>
+        <div id="footerDiv2" class="flexSpaceEvenly border width35">
+            <p id="totalMoney">
+                1000$
+            </p>
+            <div id="hitButton">
+                <button type="button" class="btn btn-success">Hit</button>
+            </div>
+            <div id="standButton">
+                <button type="button" class="btn btn-danger">Stand</button>
+            </div>
+            <div id="chips">
+                <div id="whiteChip">
+                   <img src="images//pokerchip1.png" class="pointer">
+                </div>
+                <div id="redChip">
+                    <img src="images//pokerchip3.png" class="pointer">
+                </div>
+                <div id="blueChip">
+                    <img src="images//pokerchip2.png" class="pointer">
+                </div>
+            </div>
+            <div id="dealButton">
+                <button type="button" class="btn btn-info">Deal</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">How to play Ironhack: a Blackjack version.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+    
+                <h1>(If you have two '4's in your hand, click the IronJack logo and see what happens!!)</h1>
+                <br>
+                <h1>Object of the game:</h1>
+
+                <p>The player attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.</p>
+
+                <h1>Cards Values/Scoring:</h1>
+
+                <p>It is up to each individual player if an ace is worth 1 or 11. Face cards are 10 and any other card is its pip value.</p>
+
+                <h1>The Pack:</h1>
+
+                <p>The standard 52-card pack is used. In this game we will be using six decks (312 cards), the most popular setting in casinos.</p>
+
+                <h1>Betting:</h1>
+
+                <p>Before the deal begins, the player places a bet. In this game, <b>you need to click on the chips to make a bet</b>. Each chip has a different value:
+                    <ul>
+                        <li>Red Chip: 10$</li>
+                        <li>Blue Chip: 50$</li>
+                        <li>Green Chip: 100$</li>
+                    </ul>
+                </p>
+
+                <h1>The Deal:</h1>
+
+                <p>When the player has placed his bets, the dealer gives one card face up to the player, and then one card face up to himself. Another card is then dealt face up to the player.</p>
+
+                <h1>Naturals:</h1>
+
+                <p>If a player's first two cards are an ace and a "ten-card" (a picture card or 10), giving him a count of 21 in two cards, this is a natural or "blackjack." If any player has a natural and the dealer does not, the dealer immediately pays that player one and a half times the amount of his bet. If the dealer has a natural, he immediately collects the bet of the player if he or she doesn't have naturals (but no additional amount). If the dealer and the player both have naturals, the bet of that player is a stand-off (a tie), and the player takes back his chips.</p>
+
+                <h1>The Play:</h1>
+
+                <p>The player must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, the player may stand on the two cards originally dealt him, or he may ask the dealer for additional cards, one at a time, until he either decides to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, the player loses and the dealer collects the bet wagered. </p>
+
+                <p>The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time). </p>
+
+                <h1>The Dealer's Play:</h1>
+
+                <p>When the dealer has served the player, he receives a second faced-up card. If the total is 17 or more, he must stand. If the total is 16 or under, he must take a card. He must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring his total to 17 or more (but not over 21), he must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards. </p>
+
+                <h1>Doubling Down:</h1>
+
+                <p>Another option open to the player is doubling his bet when the original two cards dealt total 9, 10, or 11. When the player's turn comes, he places a bet equal to the original bet, and the dealer gives him just one faced-up card. With two fives, the player may double down, or just play the hand in the regular way. Note that the dealer does not have the option doubling down.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="playerBustModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="playerBustModalTitle">YOU LOSE! You bust.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dealerBustModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="dealerBustModalTitle">YOU WIN! Dealer busts.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="betterHandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="betterHandModalTitle">YOU WIN! Your hand is better than the dealer's.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="worseHandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="worseHandModalTitle">YOU LOSE! Your hand is worse than the dealer's.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="equalHandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="equalHandModalTitle">PUSH! Your count is the same as the dealer's.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blackjackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="blackjackModalTitle">BLACKJACK! You win!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blackjackPushModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="blackjackPushModalTitle">PUSH! Your count is the same as the dealer's</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="red">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<div id="alternativeContent" class="displayOff">
+    <p>I'm sorry, but this game is not yet available to be played in a mobile device or tablet.</p>
+    <img src="images/brokenHeart.jpg" alt="Broken Heart Image">
+</div>
+
+<script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script 
+    src="script.js">
+</script>
+<script 
+src="scriptInteraction.js">
+</script>
+
+</body>
+</html>
